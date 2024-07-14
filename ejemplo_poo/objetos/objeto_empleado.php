@@ -1,18 +1,20 @@
 <?php
-    include_once('../clases/Empleado.php');
-    $emple = new Empleado();
-    //atributos de la clase Empleado    
-    $emple->codigo=123;
-    $emple->nivelAcademico="Técnico FullStack";
-    $emple->sueldoBase=1000;
+include_once('../clases/Empleado.php');
+$emple = new Empleado();
 
-    //atributos que hereda de la clase Persona
-    $emple->asignarNombre('Fulanito');
-    $emple->apellido="de Tal";
-    $emple->telefono=12345678;
-    $emple->direccion="Zona 5";
+// Atributos de la clase Empleado    
+$emple->apellido =$_POST['txtApellido'];
+echo "<br>Apellido: " . $emple->apellido;
 
-    echo "Sueldo liquido: ". $emple->calcularSueldoLiquido();
-    echo $emple->verDatos();
-    
+$emple->telefono=$_POST['txtTelefono'];
+$emple->direccion=$_POST['txtDireccion'];
+$emple->asignarNombre($_POST['txtNombre']);
+$emple->nivelAcademico=$_POST['txtNivelAcademico'];
+$emple->codigo=$_POST['txtCodigo'];
+$emple->sueldoBase=$_POST['txtSueldoBase'];
+
+echo "<br>Nombre: " .$emple->verNombre();
+echo "<br>" .$emple->nombreCompleto();
+echo "<br>Sueldo liquido: " .$emple->calcularSueldoLiquido();
+echo "<br>" .$emple->verDatos();
 ?>

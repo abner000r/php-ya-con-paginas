@@ -7,7 +7,7 @@
     $cliente = new Cliente();
 
 
-$cliente->apellido=$_POST['txtApellido'];
+    $cliente->apellido=$_POST['txtApellido'];
     echo "<br>Apellido: ". $cliente->apellido;
     $cliente->telefono=$_POST['txtTelefono'];
     $cliente->direccion=$_POST['txtDireccion' ];

@@ -10,7 +10,7 @@
     <div class="container mt-5">
         <div class="card mt-4">
             <div class="card-header">
-                <h2>Cliente</h2>
+                <h2>Empelado</h2>
             </div>
             <div class="card-body">
                 <form method="post" action="../objetos/objeto_empleado.php">
